@@ -1,0 +1,28 @@
+<!doctype html> 
+<html> 
+<head> 
+<link rel="icon" href="" type="image/x-icon">
+<title>index</title> 
+<meta content="IE=8" http-equiv="X-UA-Compatible"/> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+</head> 
+<body> 
+<h2>这是首页</h2> 
+<input type="button" id = "post" value = "post" />
+<input type="button" id = "get" value = "get" />
+</body> 
+<script src = "./js/gyf_core.js" ></script>
+<script>
+var url1 = "./api/show";
+var url2 = "./api/insert";
+var value1 = {id:2};
+var value2 = {name:"akakak"};
+$("get").CK(function(){
+	$.AJAX("get", url1, value1, function(html){});
+});
+$("post").CK(function(){
+	$.AJAX("post", url2, value2, function(html){});
+});
+</script>
+</html> 
